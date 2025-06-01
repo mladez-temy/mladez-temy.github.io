@@ -16,7 +16,7 @@
 
     let actualindex = 1;
     let max = 28;
-    function posun(kam) {	// primarne dostava cisla -1, +1
+    function posun(kam) {
         actualindex += kam;
 
         if (actualindex < 1) 

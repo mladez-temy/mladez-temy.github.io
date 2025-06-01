@@ -10,23 +10,10 @@ body {
 }
 
 header, nav, footer {
-  list-style-type: none;
   background-color: #e9c46a; /* žltá */
   color: #fff;
   padding: 1rem;
   text-align: center;
-}
-
-nav a {
-  list-style-type: none;
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 nav ul {
@@ -36,11 +23,23 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  flex-wrap: wrap; /* aby sa menu zalomilo na menšej obrazovke */
+  flex-wrap: wrap;
 }
 
 nav li {
   display: inline;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 .container, .content, .main {
@@ -80,10 +79,7 @@ button:hover, .btn:hover {
 
 fieldset {
   border-radius: 10px;
-  margin-left: 200px; 
-  margin-right: 200px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin: 30px 0;
   padding: 15px;
   border: 2px solid #2a9d8f;
   background-color: #f9f9f9;
@@ -108,19 +104,22 @@ input {
   margin: 0 0.5em;
 }
 
+#hlavny_obrazok {
+  width: 100%;
+  height: auto;
+}
+
+/* ======= Media Queries ======= */
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: center;
   }
+
   nav a {
     font-size: 1.5em;
-    margin: 10px 0; 
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
+    margin: 5px 0;
   }
 
   .container, .content, .main {
@@ -161,19 +160,31 @@ input {
     font-size: 1em;
     padding: 12px;
   }
-  #hlavny_obrazok {
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 30px;
+  nav a {
+    font-size: 1.2em;
+    margin: 10px 0;
+    display: block;
+    padding: 10px;
   }
 
   nav ul {
-    gap: 4,5px;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .container, .content, .main {
+    padding: 10px;
+    width: 100%;
+  }
+
+  fieldset {
+    margin: 10px 5px;
+    padding: 10px;
+    width: calc(100% - 10px);
   }
 
   img.maly {
@@ -181,9 +192,15 @@ input {
     height: 40px;
   }
 
-  fieldset {
-    margin: 10px 5px;
-    padding: 8px;
+  input {
+    font-size: 1.5em;
+    width: 2.5em;
+  }
+
+  button, .btn {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px;
   }
 }
 =======
