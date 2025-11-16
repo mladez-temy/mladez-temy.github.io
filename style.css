@@ -9,6 +9,10 @@ body {
   min-height: 100vh;
 }
 
+.konferencia{
+  padding-bottom: 15vh;
+}
+
 header, nav, footer {
   list-style-type: none;
   background-color: #e9c46a; /* žltá */
@@ -59,8 +63,13 @@ nav li {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-h1, h2, h3 {
+h2, h3 {
   color: #e76f51; /* tehlová */
+}
+h1{
+  color:#2a9d8f;
+  text-align: left;
+  padding-left: 15vw;
 }
 
 button, .btn {
