@@ -5,11 +5,10 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  text-align: center;
   min-height: 100vh;
 }
 
-.konferencia{
+.celok{
   padding-bottom: 15vh;
 }
 
@@ -65,11 +64,12 @@ nav li {
 
 h2, h3 {
   color: #e76f51; /* tehlová */
+  display: inline-block;
 }
 h1{
   color:#2a9d8f;
   text-align: left;
-  padding-left: 15vw;
+  padding-left: 200px;
 }
 
 button, .btn {
@@ -88,6 +88,7 @@ button:hover, .btn:hover {
 }
 
 fieldset {
+  position: relative;
   border-radius: 10px;
   margin-left: 200px; 
   margin-right: 200px;
@@ -96,6 +97,11 @@ fieldset {
   padding: 15px;
   border: 2px solid #2a9d8f;
   background-color: #f9f9f9;
+  text-align: center;
+}
+summary{
+  text-align: center;
+  display: inline-block;
 }
 
 footer {
@@ -109,6 +115,14 @@ img.maly {
   cursor: pointer;
   width: 90px;
   height: 60px;
+}
+
+#poznamka {
+  position: absolute;
+  left: 15px;
+  top: -10px;
+  color: red;
+  font-weight: bold;
 }
 
 input {
@@ -139,6 +153,7 @@ input {
 
   h1 {
     font-size: 1.5em;
+    padding-left: 10px;
   }
 
   h2, h3 {
@@ -179,6 +194,7 @@ input {
 @media (max-width: 480px) {
   h1 {
     font-size: 30px;
+    padding: 8px;
   }
 
   nav ul {
