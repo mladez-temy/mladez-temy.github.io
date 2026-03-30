@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mladez</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="javascript" type="text/javascript" href="javascript.js">
     <body>
         <header>
             <nav>
@@ -18,12 +17,20 @@
             </nav>
         </header>
         
-        <article class="celok">
+        <select id="filter-clankov">
+            <option value="vsetko">všetko</option>
+            <option value="konferencia">Konferencia</option>
+            <option value="tabor">Tábor</option>
+            <option value="spojena_mladez">Spojená mládež</option>
+            <option value="temy">Témy</option>
+        </select>
+        
+
+        <article class="celok" id = "konferencia">
             <h1>Konferencia</h1>
 
         <fieldset>
             <summary>
-                <p id="poznamka"> new!</p>
                 <h2>Duchovný boj</h2>
                 <p>autor: Stano Gurka</p>
             </summary>
@@ -37,7 +44,6 @@
 
         <fieldset>
             <summary>
-                <p id="poznamka"> new!</p>
                 <h2>Hranice vo vzťahoch</h2>
                 <p>autor: Maruška Grexová</p>
             </summary>
@@ -51,7 +57,6 @@
 
         <fieldset>
             <summary>
-                <p id="poznamka"> new!</p>
                 <h2>Zmysel života v kultúre zábavy</h2>
                 <p>autor: Matej Pavkovček</p>
             </summary>
@@ -65,7 +70,6 @@
 
         <fieldset>
             <summary>
-                <p id="poznamka"> new!</p>
                 <h2>Minulosť utopená</h2>
                 <p>autor: Jano Vecan</p>
             </summary>
@@ -79,12 +83,11 @@
 
     </article>
 
-        <article class="celok">
+        <article class="celok" id="tabor">
             <h1>Tábor</h1>
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Duch a nové stvorenie</h2>
                     <p>autor: Kika pogran</p>                    
                 </summary>
@@ -98,7 +101,6 @@
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Strach</h2>
                     <p>autor: Jany Šimočko</p>
                 </summary>
@@ -112,7 +114,6 @@
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Konflikty</h2>
                     <p>autor: MMM</p>
                 </summary>
@@ -126,7 +127,6 @@
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Život bez masky</h2>
                     <p>autor: Maťo Hlavatý</p>
                 </summary>
@@ -140,7 +140,6 @@
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Spoločenstvo a chvály</h2>
                     <p>autor: Zuzka Findrová</p>
                 </summary>
@@ -154,12 +153,25 @@
 
         </article>
 
-        <article class="celok">
+        <article class="celok" id="spojena_mladez">
             <h1>Spojená mládež</h1>
 
             <fieldset>
                 <summary>
                     <p id="poznamka"> new!</p>
+                    <h2>Najväčší hoax histórie?</h2>
+                    <p>autor: Nika Sochova</p>
+                </summary>
+                <details>
+                    <audio controls>
+                        <source src="/nahravky/hoax_nika_sochova.m4a" type="audio/mpeg">
+                        Váš prehliadač nepodporuje prehrávanie zvuku.
+                    </audio>
+                </details>
+            </fieldset>
+
+            <fieldset>
+                <summary>
                     <h2>Kresťan a peniaze</h2>
                     <p>autor: Lenka Janotková</p>
                 </summary>
@@ -187,17 +199,15 @@
                         Tento prehliadač nepodporuje zobrazenie PDF.
                     </iframe>
                 </details>
-                </summary>
 
             </fieldset>
         </article>
         
-        <article class="celok">
+        <article class="celok" id="temy">
             <h1>Témy</h1>
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Spokojnosť</h2>
                     <p>autor: Lydka Krpeľanová</p>
                 </summary>
@@ -211,7 +221,6 @@
 
             <fieldset>
                 <summary>
-                    <p id="poznamka"> new!</p>
                     <h2>Nasledovanie Ježiša</h2>
                     <p>autor: Marián Kaňuch</p>
                 </summary>
@@ -403,7 +412,6 @@
                         
                     </p>
                 </details>
-                </summary>
             </fieldset>
 
             <fieldset>
@@ -450,7 +458,6 @@
                         Kto zostáva vo mne a ja v ňom, ten prináša veľa ovocia, pretože bezo mňa nič nemôžete činiť.“ (Ján 15,5).</mark>  
                     </p>
                 </details>
-                </summary>
             </fieldset>
 
             <fieldset>
@@ -465,7 +472,6 @@
 
         
                 </details>
-                </summary>
             </fieldset>
 
             <fieldset>
@@ -480,10 +486,11 @@
 
         
                 </details>
-                </summary>
             </fieldset>
 
         </article>
+
+        <script src="javascript.js"> </script>
         
     </body>
 </html>

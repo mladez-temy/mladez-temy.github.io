@@ -99,6 +99,40 @@ button:hover, .btn:hover {
   background-color: #21867a;
 }
 
+/* Štýlovanie výberového menu (select) */
+#filter-clankov {
+    display: block;
+    width: 100%;
+    max-width: 300px; /* Aby nebol príliš široký na PC */
+    margin: 20px auto; /* Vycentrovanie */
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #2a9d8f; /* Zelená farba podľa tvojho webu */
+    border-radius: 25px; /* Zaoblené rohy ako majú tvoje tlačidlá */
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+    /* Vlastná šípka (voliteľné) */
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232a9d8f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+}
+
+/* Efekt pri kliknutí/zameraní */
+#filter-clankov:focus {
+    border-color: #e76f51; /* Zmení sa na tehlovú pri kliknutí */
+    box-shadow: 0 0 8px rgba(231, 111, 81, 0.3);
+}
+
+
 fieldset {
   position: relative;
   border-radius: 10px;
@@ -178,6 +212,11 @@ input {
   .section, .box {
     padding: 10px;
     font-size: 1em;
+  }
+
+  #filter-clankov {
+     max-width: 90%; /* Na mobile bude takmer na celú šírku */
+    font-size: 1rem;
   }
 
   fieldset {
